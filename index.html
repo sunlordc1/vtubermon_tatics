@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vtubermon kháng tool</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Arial', serif;
+            background: #bbcbdd
+        }
+
+        table {
+            display: block;
+        }
+
+        tr,
+        td,
+        tbody,
+        tfoot {
+            display: block;
+        }
+
+        tr {
+            padding-bottom: 10px;
+        }
+
+        td,
+        th {
+            padding: 5px 5px 0;
+            text-align: center;
+
+            &:before {
+                content: attr(data-title);
+                color: #2C3845;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                padding-right: 10px;
+                display: block;
+            }
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: left;
+            font-weight: 700;
+        }
+
+        thead {
+            th {
+                background-color: #2C3845;
+                color: #fff;
+                border: 1px solid #2C3845;
+            }
+        }
+
+        tfoot {
+            th {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                color: #2C3845;
+            }
+        }
+
+        #analyst_content div {
+            padding: 15px;
+            border-top: 0.5px solid black;
+            border-left: 0.5px solid black;
+            border-bottom: 0.5px solid black
+        }
+
+        #analyst_content div:last-child {
+            border-right: 0.5px solid black;
+        }
+    </style>
+</head>
+
+<body class="font">
+    <label for="search">Search</label>
+    <input type="text" id="search" autocomplete="cc-name" />
+    <label for="name">Vtubermon</label>
+    <select name="name" id="name">
+        <option value="pandora_miwa" class="font">Pandora Miwa</option>
+    </select>
+
+
+    <div style="display: flex;flex-direction: row;">
+        <div style="padding:4px; display: flex;">
+            <div style="padding:4px">
+                <h3>Element 1</h3>
+                <select name="element_1" id="element_1">
+                    <option disabled selected>-- Chọn nguyên tố --</option>
+                </select>
+            </div>
+            <div style="padding:4px">
+                <h3>Element 2</h3>
+                <select name="element_2" id="element_2">
+                    <option disabled selected>-- Chọn nguyên tố --</option>
+                </select>
+            </div>
+        </div>
+        <div style="padding:4px; display: flex;">
+            <div style="padding:4px">
+                <h3>Element 1</h3>
+                <select name="element_3" id="element_3">
+                    <option disabled selected>-- Chọn nguyên tố --</option>
+                </select>
+            </div>
+            <div style="padding:4px">
+                <h3>Element 2</h3>
+                <select name="element_4" id="element_4">
+                    <option disabled selected>-- Chọn nguyên tố --</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <button id="analyst">Phân tích</button>
+    </div>
+    <div style="display: flex;flex-direction: column;">
+        <h2 id="analyst_title"></h2>
+        <div id="analyst_content" style="display: flex;flex-direction: row;">
+
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
